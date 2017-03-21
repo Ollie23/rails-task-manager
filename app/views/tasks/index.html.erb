@@ -1,0 +1,13 @@
+<body>
+
+  <% @tasks.each do |task| %>
+  <h2>
+    <%= link_to task.name.capitalize, task_path(task) %>
+  </h2>
+  <p><%= task.details %></p>
+
+  <% end %>
+
+  <%= link_to "Create new", new_task_path%>
+
+</body>
